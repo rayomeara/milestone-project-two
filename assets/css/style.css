@@ -1,0 +1,22 @@
+.loginDiv {
+    margin: auto;
+    width: 25%;
+    padding: 15% 0 20% 0;
+}
+
+header {
+    height: 50px;
+    background-color: darkgreen;
+}
+
+section {
+    background-color: lightgreen;
+}
+
+.chartDiv {
+    padding: 20px 0;
+}
+
+.messagesDiv {
+    padding: 40px 0;
+}
