@@ -20,3 +20,49 @@ section {
 .messagesDiv {
     padding: 40px 0;
 }
+
+.container p {
+    font-family: Arial;    
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#titleDiv {
+    text-align: center;
+    float:left;
+    width:90%;
+}
+
+#titleDiv p {
+    font-family: Arial;
+    font-size: 32px;
+    color: white;
+}
+
+#loginDetailsDiv {
+    float: left;
+    width: 10%;
+}
+
+#usernameDetails {
+    font-family: Arial;
+    color: white;
+    margin-bottom: 0px;
+}
+
+#logoutLink {
+    font-family: Arial;
+    margin-bottom: 0px;
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1360px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .container {
+        max-width: 1760px;
+    }
+}

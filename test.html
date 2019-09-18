@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            Jasmine Testing
+        </title>
+        <!-- Load Jasmine Framework -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.4.0/jasmine.js" integrity="sha256-A1UHgrQzApWh893FP9przUyLCugwbvsLPAEUStp1MKA=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.4.0/jasmine-html.js" integrity="sha256-oxQQkzuwLW+9M6Ko6otgsJr9b5m0rR5V0pTBe/ITvNc=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.4.0/boot.js" integrity="sha256-HG8TKl0T65NyELmbUoo0H7/a1e++smYdXXtuuEsyKok=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.4.0/jasmine.css" integrity="sha256-TTb3c5Z0pxgwRWHzGE700nLTMIOUNgkN2SGXqoflga0=" crossorigin="anonymous" />
+        
+        <!-- Load scripts -->
+        <script type="text/javascript" src="assets/js/index.js"></script>
+        
+        <script type="text/javascript" src="assets/js/indexSpec.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            
+        </header>
+        <section>
+            <div class="loginDiv">
+                <form action="main.html" onsubmit="return processLogin();">
+                    <fieldset>
+                        <legend>Login</legend>
+                        <br/>
+                        <div class="form-group">
+                            <label for="username1"><i>Username</i></label>
+                            <input type="text" class="form-control" id="username1" placeholder="Enter username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password1"><i>Password</i></label>
+                            <input type="password" class="form-control" id="password1" placeholder="Enter password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </fieldset>
+                </form>
+                <div class="messagesDiv">
+                    <i><div id="messages"></div></i>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
