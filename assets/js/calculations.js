@@ -7,17 +7,17 @@ var random1;
 for (i=0;i<entries1;i++) {
   random1 = parseInt(Math.random() * (+max1 - +min1) + +min1);
   if (random1 < 16231) {
-    document.write(4);
+    console.log(4);
   } else if (random1 < (16231 + 51107)) {
-    document.write(3);
+    console.log(3);
   } else if (random1 < (16231 + 51107 + 172539)) {
-    document.write(0);
+    console.log(0);
   } else if (random1 < (16231 + 51107 + 172539 + 290057)) {
-    document.write(2);
+    console.log(2);
   } else {
-    document.write(1);
+    console.log(1);
   } 
-  document.write(",")
+  console.log(",")
 }
 */
 
@@ -30,13 +30,13 @@ var random2;
 for (i=0;i<entries2;i++) {
   random2 = parseInt(Math.random() * (+max2 - +min2) + +min2);
   if (random2 < 20582) { 
-    document.write("computer_n/a");
+    console.log("computer_n/a");
   } else if (random2 < (20582+197062)) { 
-    document.write("computer_no");
+    console.log("computer_no");
   } else {
-    document.write("computer_yes");
+    console.log("computer_yes");
   } 
-  document.write(",")
+  console.log(",")
 }
 */
 
@@ -49,48 +49,18 @@ var random3;
 for (i=0;i<entries3;i++) {
   random3 = parseInt(Math.random() * (+max3 - +min3) + +min3);
   if (random3 < 21473) { 
-    document.write("internet_n/a");
+    console.log("internet_n/a");
   } else if (random3 < (21473+65600)) { 
-    document.write("internet_other");
+    console.log("internet_other");
   } else if (random3 < (21473+65600+200718)) { 
-    document.write("internet_no");
+    console.log("internet_no");
   } else {
-    document.write("internet_broadband");
+    console.log("internet_broadband");
   } 
-  document.write(",")
+  console.log(",")
 }
 */
 
-// Travel Formula
-/*
-var min4=1; 
-var max4=752662;  
-var entries4=1199;
-var random4;
-for (i=0;i<entries4;i++) {
-  random4 = parseInt(Math.random() * (+max4 - +min4) + +min4);
-  if (random4 < 1753) { 
-    document.write("travel_motorcycle");
-  } else if (random4 < (1753+2851)) { 
-    document.write("travel_train");
-  } else if (random4 < (1753+2851+8530)) { 
-    document.write("travel_bicycle");
-  } else if (random4 < (1753+2851+8530+35562)) { 
-    document.write("travel_van");
-  } else if (random4 < (1753+2851+8530+35562+55881)) { 
-    document.write("travel__bus");
-  } else if (random4 < (1753+2851+8530+35562+55881+58952)) { 
-    document.write("travel_other");
-  } else if (random4 < (1753+2851+8530+35562+55881+58952+101527)) { 
-    document.write("travel_foot");
-  } else if (random4 < (1753+2851+8530+35562+55881+58952+101527+158797)) { 
-    document.write("travel_car_passenger");
-  } else {
-    document.write("travel_car");
-  } 
-  document.write(",")
-}
-*/
 
 // Leave Formula
 /*
@@ -101,51 +71,135 @@ var random5;
 for (i=0;i<entries5;i++) {
   random5 = parseInt(Math.random() * (+max5 - +min5) + +min5);
   if (random5 < 27307) { 
-    document.write("leave_0630");
+    console.log("leave_0630");
   } else if (random5 < (27307+28055)) { 
-    document.write("leave_n/a");
+    console.log("leave_n/a");
   } else if (random5 < (27307+28055+39425)) { 
-    document.write("leave_0700");
+    console.log("leave_0700");
   } else if (random5 < (27307+28055+39425+54994)) { 
-    document.write("leave_after_0930");
+    console.log("leave_after_0930");
   } else if (random5 < (27307+28055+39425+54994+58789)) { 
-    document.write("leave_0730");
+    console.log("leave_0730");
   } else if (random5 < (27307+28055+39425+54994+58789+68470)) { 
-    document.write("leave_0930");
+    console.log("leave_0930");
   } else if (random5 < (27307+28055+39425+54994+58789+58952+103966)) { 
-    document.write("leave_0800");
+    console.log("leave_0800");
   } else if (random5 < (27307+28055+39425+54994+58789+58952+101527+152392)) { 
-    document.write("leave_0830");
+    console.log("leave_0830");
   } else {
-    document.write("leave_0900");
+    console.log("leave_0900");
   } 
-  document.write(",")
+  console.log(",")
 }
 */
 
-// Time Formula
-/*
-var min6=1; 
-var max6=722553;  
-var entries6=1199;
-var random6;
-for (i=0;i<entries6;i++) {
-  random6 = parseInt(Math.random() * (+max6 - +min6) + +min6);
-  if (random6 < 9420) { 
-    document.write("time_90+");
-  } else if (random6 < (9420+23599)) { 
-    document.write("time_90");
-  } else if (random6 < (9420+23599+30047)) { 
-    document.write("time_60");
-  } else if (random6 < (9420+23599+30047+43114)) { 
-    document.write("time_n/a");
-  } else if (random6 < (9420+23599+30047+43114+111252)) { 
-    document.write("time_45");
-  } else if (random6 < (9420+23599+30047+43114+111252+225477)) { 
-    document.write("time_30");
+// Travel Formula
+///*
+var min4=1; 
+var max4=328669;  
+var entries4=259;
+var random4;
+var travelString = "";
+var timeString = "";
+
+var motorcycleValue = 507;
+var trainValue = 1079;
+var bicycleValue = 4726;
+var vanValue = 18440;
+var busValue = 30183;
+var otherValue = 27412;
+var footValue = 36870;
+var passengerValue = 67626;
+
+for (var i=0;i<entries4;i++) {
+  random4 = parseInt(Math.random() * (+max4 - +min4) + +min4);
+  if (random4 < motorcycleValue) { 
+    travelString = travelString + "travel_motorcycle";
+    timeString = timeString + createTimeValue("travel_motorcycle");
+  } else if (random4 < (motorcycleValue+trainValue)) { 
+    travelString = travelString + "travel_train";
+    timeString = timeString + createTimeValue("travel_train");
+  } else if (random4 < (motorcycleValue+trainValue+bicycleValue)) { 
+    travelString = travelString + "travel_bicycle";
+    timeString = timeString + createTimeValue("travel_bicycle");
+  } else if (random4 < (motorcycleValue+trainValue+bicycleValue+vanValue)) { 
+    travelString = travelString + "travel_van";
+    timeString = timeString + createTimeValue("travel_van");
+  } else if (random4 < (motorcycleValue+trainValue+bicycleValue+vanValue+busValue)) { 
+    travelString = travelString + "travel_bus";
+    timeString = timeString + createTimeValue("travel_bus");
+  } else if (random4 < (motorcycleValue+trainValue+bicycleValue+vanValue+busValue+otherValue)) { 
+    travelString = travelString + "travel_other";
+    timeString = timeString + createTimeValue("travel_other");
+  } else if (random4 < (motorcycleValue+trainValue+bicycleValue+vanValue+busValue+otherValue+footValue)) { 
+    travelString = travelString + "travel_foot";
+    timeString = timeString + createTimeValue("travel_foot");
+  } else if (random4 < (motorcycleValue+trainValue+bicycleValue+vanValue+busValue+otherValue+footValue+passengerValue)) { 
+    travelString = travelString + "travel_car_passenger";
+    timeString = timeString + createTimeValue("travel_car_passenger");
   } else {
-    document.write("time_15");
+    travelString = travelString + "travel_car";
+    timeString = timeString + createTimeValue("travel_car");
   } 
-  document.write(",")
+  if (i == 600) {
+    travelString = travelString + "\n\n";
+    timeString = timeString + "\n\n";
+  } else if (i+1 < entries4) {
+    travelString = travelString + ",";
+    timeString = timeString + ",";
+  }
+  
 }
-*/
+
+function createTimeValue(travelValue) {
+  var min6=1; 
+  var max6;  
+  var entries6=259;
+  var timeValue;
+  var random6;
+  
+  var nintyPlusValue = 5399;
+  var nintyValue = 12240;
+  var sixtyValue = 14086;
+  var naValue = 20740;
+  var fortyfiveValue = 48129;
+  var thirtyValue = 92542;
+  var fifteenValue = 122640;
+  
+  if (travelValue == "travel_foot" || travelValue == "travel_bicycle") {
+    max6=naValue+thirtyValue+fifteenValue;
+    random6 = parseInt(Math.random() * (+max6 - +min6) + +min6);
+    if (random6 < (naValue)) { 
+      timeValue = "time_n/a";
+    } else if (random6 < (naValue+thirtyValue)) { 
+      timeValue = "time_30";
+    } else {
+      timeValue = "time_15";
+    }
+  } else {
+    max6=315776;
+    random6 = parseInt(Math.random() * (+max6 - +min6) + +min6);
+    if (random6 < nintyPlusValue) { 
+      timeValue = "time_90+";
+    } else if (random6 < (nintyPlusValue+nintyValue)) { 
+      timeValue = "time_90";
+    } else if (random6 < (nintyPlusValue+nintyValue+sixtyValue)) { 
+      timeValue = "time_60";
+    } else if (random6 < (nintyPlusValue+nintyValue+sixtyValue+naValue)) { 
+      timeValue = "time_n/a";
+    } else if (random6 < (nintyPlusValue+nintyValue+sixtyValue+naValue+fortyfiveValue)) { 
+      timeValue = "time_45";
+    } else if (random6 < (nintyPlusValue+nintyValue+sixtyValue+naValue+fortyfiveValue+thirtyValue)) { 
+      timeValue = "time_30";
+    } else {
+      timeValue = "time_15";
+    }
+  }
+  
+  return timeValue;
+}
+
+console.log(travelString);
+console.log(timeString);
+
+//*/

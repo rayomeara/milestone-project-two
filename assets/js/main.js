@@ -69,7 +69,7 @@ function show_county_totals(ndx) {
     var computersByRegion = dim.group().reduce(add_item, remove_item, initialise);
     
     dc.barChart("#county_totals")
-        .width(1000)
+        .width(800)
         .height(500)
         .margins({top: 20, right: 80, bottom: 30, left: 80})
         .dimension(dim)
@@ -115,6 +115,7 @@ function show_computer_totals(ndx) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
+        .elasticY(true)
         .margins({top: 10, right: 100, bottom: 30, left: 60});
         
     for (var i=1;i<counties.length;i++) {
@@ -144,7 +145,7 @@ function show_internet_totals(ndx) {
     var dim = ndx.dimension(dc.pluck("Internet Status"));
     
     var barChart = dc.barChart("#internet_totals")
-        .width(550)
+        .width(450)
         .height(250)
         .dimension(dim)
         .group(rankByCounty(dim, counties[0]), counties[0])
@@ -153,6 +154,7 @@ function show_internet_totals(ndx) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
+        .elasticY(true)
         .margins({top: 10, right: 100, bottom: 30, left: 60});
         
     for (var i=1;i<counties.length;i++) {
@@ -191,6 +193,7 @@ function show_car_totals(ndx) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
+        .elasticY(true)
         .margins({top: 10, right: 100, bottom: 30, left: 60});
         
     for (var i=1;i<counties.length;i++) {
@@ -270,7 +273,7 @@ function show_transport_totals(ndx) {
     var dim = ndx.dimension(dc.pluck("transport_code"));
     
     var barChart = dc.barChart("#transport_totals")
-        .width(900)
+        .width(450)
         .height(400)
         .dimension(dim)
         .group(rankByCounty(dim, counties[0]), counties[0])
@@ -279,7 +282,8 @@ function show_transport_totals(ndx) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .margins({top: 10, right: 10, bottom: 30, left: 60});
+        .elasticY(true)
+        .margins({top: 10, right: 10, bottom: 100, left: 50});
         
     for (var i=1;i<counties.length;i++) {
         barChart.stack(rankByCounty(dim, counties[i]), counties[i]);
@@ -307,7 +311,7 @@ function show_time_totals(ndx) {
     var dim = ndx.dimension(dc.pluck("start_code"));
     
     var barChart = dc.barChart("#time_totals")
-        .width(650)
+        .width(450)
         .height(250)
         .dimension(dim)
         .group(rankByCounty(dim, counties[0]), counties[0])
@@ -316,7 +320,8 @@ function show_time_totals(ndx) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .margins({top: 10, right: 50, bottom: 30, left: 60});
+        .elasticY(true)
+        .margins({top: 10, right: 50, bottom: 60, left: 60});
         
     for (var i=1;i<counties.length;i++) {
         barChart.stack(rankByCounty(dim, counties[i]), counties[i]);
@@ -353,6 +358,7 @@ function show_travel_totals(ndx) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
+        .elasticY(true)
         .margins({top: 10, right: 50, bottom: 30, left: 60});
         
     for (var i=1;i<counties.length;i++) {
@@ -392,7 +398,7 @@ function show_cars_transport_distribution(ndx) {
     var fourByTransport = rankByCars(dim, "4");
     
     var barChart = dc.barChart("#cars_transport_distribution")
-        .width(770)
+        .width(550)
         .height(400)
         .dimension(dim)
         .group(zeroByTransport, "0 cars")
@@ -409,8 +415,8 @@ function show_cars_transport_distribution(ndx) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .legend(dc.legend().x(627).y(20).itemHeight(15).gap(5))
-        .margins({top: 10, right: 150, bottom: 50, left: 50});
+        .legend(dc.legend().x(475).y(20).itemHeight(15).gap(5))
+        .margins({top: 10, right: 150, bottom: 100, left: 50});
 
 }
 
@@ -450,7 +456,7 @@ function show_start_time_transport_distribution(ndx) {
     var vanByStartTime = rankByTransport(dim, "van");
     
     var barChart = dc.barChart("#start_time_transport_distribution")
-        .width(770)
+        .width(550)
         .height(400)
         .dimension(dim)
         .group(bicycleByStartTime, "bicycle")
@@ -471,7 +477,7 @@ function show_start_time_transport_distribution(ndx) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .legend(dc.legend().x(627).y(20).itemHeight(15).gap(5))
+        .legend(dc.legend().x(450).y(20).itemHeight(15).gap(5))
         .margins({top: 10, right: 150, bottom: 50, left: 50});
 
 }
@@ -512,7 +518,7 @@ function show_travel_time_transport_distribution(ndx) {
     var vanByStartTime = rankByTransport(dim, "van");
     
     var barChart = dc.barChart("#travel_time_transport_distribution")
-        .width(770)
+        .width(550)
         .height(400)
         .dimension(dim)
         .group(bicycleByStartTime, "bicycle")
@@ -533,7 +539,7 @@ function show_travel_time_transport_distribution(ndx) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .legend(dc.legend().x(627).y(20).itemHeight(15).gap(5))
+        .legend(dc.legend().x(450).y(20).itemHeight(15).gap(5))
         .margins({top: 10, right: 150, bottom: 50, left: 50});
 
 }

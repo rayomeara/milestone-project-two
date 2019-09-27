@@ -55,14 +55,16 @@ section {
     margin-bottom: 0px;
 }
 
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1360px;
-    }
+#transport_totals .x.axis text,
+#cars_transport_distribution .x.axis text,
+#time_totals .x.axis text, 
+#start_time_transport_distribution .x.axis text {
+    text-anchor: end !important;
+    transform: rotate(-45deg);
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1400px) {
     .container {
-        max-width: 1760px;
+        max-width: 70%;
     }
 }
